@@ -1,5 +1,5 @@
-//js로 간단한 계산기 만들기
-//object와 function을 이용하여!
+/*js로 간단한 계산기 만들기
+object와 function을 이용하여!*/
 const calculater = {
   add: function (a, b) {
     console.log(a + b)

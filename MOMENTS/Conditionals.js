@@ -8,4 +8,4 @@ if (isNaN(age)) {
   console.log("You can drink");
 } else (age > 50) {
   console.log("You can't drink");
-}
+} 
