@@ -2,6 +2,8 @@
 
 ## #2 Welcome to javascript
 
+여기 나오는 문법들은 다른 언어에서도 모양만 다르지 똑같음 **원리이해**
+
 F12 -> console : JS
 
 string : 문자로만 이루어진 것 ""
@@ -137,4 +139,102 @@ if(condition) {
 ​	&& : AND, 둘다, 그리고
 
 ​	|| : OR , 하나만, 또는
+
+​	age === 100 : age가 100이라면?
+
+​	age !== 100 : age가 100이 아니라면?
+
+
+
+## #3 JAVASCRIPT ON THE BROWSER
+
+#### The Document Object
+
+​	JavaScript는 HTML에 이미 연결되어 있음
+
+​	document.body
+
+
+
+#### HTML in Javascript
+
+​	document 함수 : JavaScript관점에서의 HTML
+
+​	getElementById 함수 : id로 element를 가져올 수 있음	
+
+
+
+#### Searching For Elements
+
+​	getElementByClassName() 함수 : class로  html의 element를 가져올 수 있음
+
+​	getElementByTagName() 함수 : tagname으로 element를 가져올 수 있음
+
+​	**querySelector()** : css처럼 사용하여 element를 가져올 수 있음
+
+​									element 하나만 가져올 수 있음 // 모두 가져오고 싶으면 querySelectorAll 사용
+
+```js
+const title = document.querySelector("#hello")
+const title = document.getElemntById("hello")
+//same things
+```
+
+
+
+#### Events
+
+​	property 앞에 on이 붙으면 event이당!
+
+​	addEventListener()
+
+```javascript
+const title = documnet.querySelector("div.hello:fisrt-child h1");
+
+function hadleTitleClick() {
+	title.style.color = "blue";
+}
+
+title.addEentListener("click", handleTitleClick)
+```
+
+- listen하고 싶은 event를 찾는 가장 좋은 방법
+
+  ​	구글에 찾고 싶은 element의 이름, 예를 들어 h1 element을 MDN에 검색해보는거야
+
+  ​	google : h1 html element mdn -> web API
+
+  	
+
+​	자바스크립트에서 window함수는 기본적으로 제공해준다
+
+​	따라서 window.addEventListener를 사용해 event를 추가할 수 있다
+
+
+
+#### CSS in Javascript
+
+​	step1. element를 찾아라
+
+​	step2. event를 listen해라
+
+​	step3. 그 event에 반응해라
+
+ 
+
+​	className : 모든걸 교체해버림, 이전에 css들은 상관하지 않음
+
+​	classList : class들의 목록으로 작업할 수 있게해줌
+
+
+
+```javascript
+h1.classList.toggle("clicked");
+```
+
+​	**toggle**은 h1의 classList에 clicked class가 이미 있는지 확인해서
+
+​	만약 있다면, toggle이 clicked를 제거해줌
+
+​	만약 h1의 classList에 clicked가 존재하지 않는다면, toggle은 clicked를 classList에 추가를 해줌
 

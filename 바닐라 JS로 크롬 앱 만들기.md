@@ -238,3 +238,11 @@ h1.classList.toggle("clicked");
 
 ​	만약 h1의 classList에 clicked가 존재하지 않는다면, toggle은 clicked를 classList에 추가를 해줌
 
+
+
+## #4 Login
+
+#### Form Submission
+
+​	.length : 문자열의 길이를 확인하고 싶을 때 사용
+
