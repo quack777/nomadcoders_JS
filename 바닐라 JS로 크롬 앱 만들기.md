@@ -246,3 +246,110 @@ h1.classList.toggle("clicked");
 
 ​	.length : 문자열의 길이를 확인하고 싶을 때 사용
 
+​	JS를 사용해서 input태그로 value를 받아와서 login할때 id의 길이등을 제어할 수 있지만 html내에서 form태그 	안에서 input을 사용하면 required, maxlength를 이용하여 자체적으로 제어할 수 있음
+
+​	우리가 form안에서 엔터를 누르고 input이 더 존재하지 않는다면 자동으로 submit된다는 규칙
+
+​	또는, form안에 있는 버튼을 눌렀을 때, 이 때도 form이 자동으로 submit된다는 것
+
+​	이 강의에서 하고싶은 것은 브라우저가 새로고침하지 않고 user정보를 저장하도록 하고 싶은것임요
+
+
+
+#### Events
+
+​	브라우저의 기본동작(event)을 막고 싶을 때 : event.preventDefault
+
+​	form의 기본 동작은 submit
+
+```javascript
+function onLoginSubmit(event) {
+  event.preventDefault();
+  console.log(loginInput.value);
+}
+```
+
+​	link의 기본 동작은 이동
+
+
+
+#### Getting Username
+
+​	string과 변수 합치기
+
+```js
+greeting.innerText = "Hello " + username;
+greeting.innerText = `Hello ${username}`; //백틱(``)사용
+```
+
+
+
+#### Saving Username
+
+​	브라우저 내에서 바로 db로 저장하는 법 localStorage.setItem("username", "eunchong")
+
+​	저장한 값 불러내기 localStorage.getItme("username")
+
+​	저장된 값 지우기 localStroage.removeItem("username")
+
+
+
+#### Loading Username
+
+​	string을 변수로 저장하는 경우 변수의 이름은 대문자로 정하는 것이 관례
+
+
+
+## #5 Clock
+
+#### Intervals
+
+​	Interval이란 '매번'일어나야 하는 무언가를 말함
+
+​	ex) '매 2초'라고 하면 이게 interval
+
+​	**setInterval**(실행하려는 함수 이름, **매** 호출 사이에 얼마나 기다릴지 시간)
+
+
+
+#### Timeousts and Dates
+
+​	**setTimeout**(실행하려는 함수 이름, 시간)
+
+​	Date(), date.getHours(), date.getMinutes(), date.getSeconds()
+
+
+
+#### PadStart
+
+```js
+"1".padStart(2,"0")
+```
+
+
+
+## #6 Quotes and background
+
+#### Quotes
+
+​	Math.random() : 0~1까지의 숫자를 랜덤으로 뽑아줌
+
+​	round() 반올림, ceil() 올림, floor() 내림
+
+
+
+#### Background
+
+​	document.createElement("img")
+
+​	document.body.appendChild(); : html body에 js에서의 요소를 추가하는 방법
+
+
+
+## #7 To do list
+
+
+
+
+
+## #8 Weather
